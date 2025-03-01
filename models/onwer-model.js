@@ -3,13 +3,13 @@ const mongoose = require('mongoose')
 
 
 const ownerSchema = mongoose.Schema({
-  fullname:String,
+  fullname:{
+    type:String,
+    minlength:3,
+    trim:true,
+  },
   email:String,
 password:String,
-cart:{
-    type:Array,
-    default:[]
-},
 products:{
     type:Array,
     default:[]
