@@ -3,15 +3,13 @@
     <div class="w-3/4 grid grid-cols-1 gap-8 p-10 bg-white/10 backdrop-blur-md rounded-lg shadow-2xl">
         <div class="p-8 bg-white rounded-lg shadow-md transition transform hover:scale-105">
             <h4 class="text-2xl capitalize mb-5">Admin Access</h4>
-            <form action="/owners/ownerlogin" method="post">
+            <form action="/owners/ownerregister" method="post">
+                <input class="input-field" type="text" placeholder="Full Name" name="fullname">
                 <input class="input-field" type="email" placeholder="Email" name="email">
                 <input class="input-field" type="password" placeholder="Password" name="password">
-                
-                <div class="mb-6 flex  w-full">
-                    <a class="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md transition-transform duration-300 transform hover:scale-110 hover:bg-blue-700 text-center" href="/owners/ownerregister" class="text-xl text-gray-800 font-bold mb-2 w-full">Create Admin</a>
-                </div>
-                <button class="btn-primary">Login</button>
-                
+                <input class="input-field" type="text" placeholder="ImageUrl" name="image">
+                <input class="input-field" type="text" placeholder="GST Number" name="Gst">
+                <button class="btn-primary">Register</button>
             </form>
         </div>
     </div>

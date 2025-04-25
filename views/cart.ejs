@@ -1,4 +1,7 @@
 <%- include('./partials/header') %>
+
+
+
     <div class="w-full min-h-screen flex flex-col md:flex-row items-start px-5 md:px-20 py-10 md:py-20 gap-5 md:gap-10 ">
        
            <% if (cartItems.length > 0) { %>
@@ -17,7 +20,13 @@
                         <div class="flex items-center gap-2">
                             <i class="w-5 h-5 md:w-7 md:h-7 bg-white flex rounded-full items-center justify-center ri-add-line"></i>
                             <div class="px-2 py-1 rounded-md bg-white text-black">01</div>
-                            <i class="w-5 h-5 md:w-7 md:h-7 bg-white flex rounded-full items-center justify-center ri-subtract-line"></i>
+                            <form action="/cart/delete/<%= item._id %>?_method=DELETE" method="POST" style="display:inline;">
+                                <button type="submit" class="w-5 h-5 md:w-7 md:h-7 bg-white flex rounded-full items-center justify-center">
+                                    <i class="ri-subtract-line"></i>
+                                </button>
+                            </form>
+                            
+
                         </div>
                     </div>
                     <div class="flex items-center justify-between px-5 py-3 text-white bg-[<%= item.textcolor %>]" >
